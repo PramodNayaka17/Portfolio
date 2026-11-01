@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pramod Nayaka H S — Software Developer & MCA Graduate</title>
+  <meta name="description"
+    content="Personal portfolio of Pramod Nayaka H S — MCA Graduate & Software Developer specializing in React.js, Python, Flask, Django, Machine Learning, and Full-Stack Engineering.">
+  <meta name="keywords"
+    content="Pramod Nayaka, Pramod Nayaka H S, Software Developer, MCA Graduate, Full Stack Developer, React Developer, Python Developer, Bengaluru">
+  <meta name="author" content="Pramod Nayaka H S">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pramod Nayaka H S — Software Developer">
+  <meta property="og:description"
+    content="MCA Graduate & Software Developer based in Bengaluru, India. Explore featured projects, skills, and experience.">
+  <meta property="og:image" content="assets/profile.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/profile.png">
+
+  <!-- Modern Fonts (Inter & Space Grotesk / Switzer feel) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-theme="dark">
+
+  <!-- Top Glassmorphic Navigation Bar -->
+  <header class="top-nav" id="topNav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="#hero" class="brand-link">
+          <span class="brand-name">Pramod Nayaka H S</span>
+          <span class="status-indicator">
+            <span class="status-dot"></span>
+            <span class="status-text">Available for work</span>
+          </span>
+        </a>
+      </div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-right">
+        <a href="assets/pramod_resume_2k26.pdf" download="Pramod_Nayaka_Resume.pdf" class="nav-cta-link"
+          id="navDownloadCv">
+          Download CV
+        </a>
+        <a href="#contact" class="nav-cta-link cta-contact" id="navContactMe">
+          Contact Me
+        </a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme" title="Toggle dark / light mode">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+            </path>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu-drawer">
+      <div class="mobile-menu-header">
+        <span class="drawer-title">Navigation</span>
+        <button class="drawer-close" id="mobileMenuClose">&times;</button>
+      </div>
+      <div class="mobile-menu-links">
+        <a href="#hero" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">01. About</a>
+        <a href="#experience" class="mobile-link">02. Experience</a>
+        <a href="#skills" class="mobile-link">03. Skills</a>
+        <a href="#education" class="mobile-link">04. Education</a>
+        <a href="#projects" class="mobile-link">05. Projects</a>
+        <a href="#resume" class="mobile-link">06. Resume</a>
+        <a href="#contact" class="mobile-link">07. Contact</a>
+      </div>
+      <div class="mobile-menu-footer">
+        <a href="assets/pramod_resume_2k26.pdf" download="Pramod_Nayaka_Resume.pdf" class="btn btn-outline w-full">
+          Download CV (PDF)
+        </a>
+        <a href="#contact" class="btn btn-primary w-full">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Split-Screen Architecture -->
+  <div class="main-layout" id="mainLayout">
+
+    <!-- Sticky Portrait Column (Reference Design Match) -->
+    <aside class="sticky-portrait-column" id="portraitColumn">
+      <div class="portrait-wrapper">
+        <div class="portrait-glow"></div>
+        <img src="assets/profile_studio.png" alt="Pramod Nayaka H S" class="portrait-img" id="portraitImg"
+          loading="eager">
+        <div class="portrait-vignette-overlay"></div>
+        <div class="portrait-caption-pill">
+          <span class="pulse-dot"></span>
+          <span>Bengaluru, India • Open for Roles</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Scrollable Content Column -->
+    <main class="content-scroll-column" id="contentColumn">
+
+      <!-- ==============================================
+           HERO SECTION (Matches Reference Framer Hero)
+           ============================================== -->
+      <section class="hero-section" id="hero">
+        <div class="hero-meta-grid">
+          <div class="hero-experience-badge">
+            <span class="badge-year">2024 &rarr; 2026</span>
+            <span class="badge-label">MCA Graduate &bull; 9.41 CGPA</span>
+          </div>
+
+          <div class="hero-ethos-quote">
+            <p>
+              &ldquo;I BELIEVE SCALABLE SOFTWARE IS NOT JUST WRITTEN, BUT THOUGHTFULLY ARCHITECTED &mdash; WITH CLEAN
+              LOGIC, INTUITIVE DESIGN, AND REAL-WORLD IMPACT.&rdquo;
+            </p>
+          </div>
+        </div>
+
+        <div class="hero-main-title-block">
+          <div class="hero-role-tag">SOFTWARE DEVELOPER &bull; FULL-STACK &bull; ML</div>
+          <h1 class="hero-title">
+            <span class="title-word">PRAMOD</span>
+            <span class="title-word">NAYAKA H S</span>
+          </h1>
+          <p class="hero-subtitle">
+            MCA Graduate &bull; Software Developer, based in Bengaluru, India
+          </p>
+        </div>
+
+        <!-- Hero Actions -->
+        <div class="hero-actions-row">
+          <a href="#projects" class="btn btn-primary" id="heroViewProjectsBtn">
+            <span>View Projects</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </a>
+          <a href="assets/pramod_resume_2k26.pdf" download="Pramod_Nayaka_Resume.pdf" class="btn btn-outline"
+            id="heroDownloadResumeBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+            </svg>
+            <span>Download Resume</span>
+          </a>
+          <a href="#contact" class="btn btn-ghost" id="heroContactBtn">
+            <span>Contact Me</span>
+            <span class="arrow-right">&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="hero-scroll-hint">
+          <a href="#about" class="scroll-link">
+            <span>Scroll</span>
+            <span class="scroll-arrow">&darr;</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           01. ABOUT SECTION
+           ============================================== -->
+      <section class="portfolio-section" id="about">
+        <div class="section-grid">
+          <div class="section-heading-col">
+            <h2 class="section-number-title">01. ABOUT</h2>
+          </div>
+          <div class="section-body-col">
+            <div class="about-text-block">
+              <p class="lead-text">
+                I am an <strong>MCA Graduate & Software Developer</strong> with a solid foundation in software
+                engineering, full-stack web architecture, and applied machine learning.
+              </p>
+              <p>
+                Graduating with an outstanding <strong>9.41 CGPA</strong> from <strong>Kishkinda University</strong>, I
+                have cultivated both academic depth and rigorous practical experience. My hands-on work spans building
+                responsive modern web applications in <strong>React.js</strong>, architecting robust backend APIs in
+                <strong>Python (Flask/Django)</strong>, managing relational and NoSQL databases (<strong>MySQL,
+                  MongoDB</strong>), and training predictive machine learning models with <strong>Scikit-learn</strong>.
+              </p>
+              <p>
+                Whether it was architecting <em>KU SmartSchedule</em> &mdash; an AI-powered timetable generator that
+                eradicated scheduling conflicts for university departments &mdash; or developing predictive machine
+                learning pipelines at <strong>YBI Foundation</strong>, I focus on engineering performant, scalable, and
+                human-centric software.
+              </p>
+            </div>
+
+            <!-- Fast Metrics Row -->
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <span class="metric-num">9.41</span>
+                <span class="metric-label">MCA CGPA (Top Tier)</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-num">2+</span>
+                <span class="metric-label">Key Capstone & QA Projects</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-num">1</span>
+                <span class="metric-label">Industry Internship</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-num">100%</span>
+                <span class="metric-label">Clean Code Commitment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           02. EXPERIENCE SECTION
+           ============================================== -->
+      <section class="portfolio-section" id="experience">
+        <div class="section-grid">
+          <div class="section-heading-col">
+            <h2 class="section-number-title">02. EXPERIENCE</h2>
+          </div>
+          <div class="section-body-col">
+            <div class="experience-timeline">
+
+              <!-- YBI Foundation Experience -->
+              <div class="experience-item">
+                <div class="experience-header">
+                  <div class="experience-role-group">
+                    <h3 class="experience-role">Data Science & Machine Learning Intern</h3>
+                    <span class="experience-company">YBI Foundation</span>
+                  </div>
+                  <span class="experience-badge">Jan 2026 &mdash; May 2026</span>
+                </div>
+                <ul class="experience-points">
+                  <li>Engineered predictive machine learning pipelines using <strong>Python, Scikit-learn, and
+                      Pandas</strong>.</li>
+                  <li>Conducted extensive exploratory data analysis (EDA), data cleaning, feature engineering, and
+                    visualization with <strong>Matplotlib</strong>.</li>
+                  <li>Trained and benchmarked classification & regression algorithms, evaluating precision, recall, and
+                    ROC-AUC metrics.</li>
+                  <li>Developed structured documentation and predictive dashboards for end-user interpretation.</li>
+                </ul>
+                <div class="tech-tag-row">
+                  <span class="tag">Python</span>
+                  <span class="tag">Machine Learning</span>
+                  <span class="tag">Scikit-learn</span>
+                  <span class="tag">Pandas</span>
+                  <span class="tag">Data Visualization</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           03. SKILLS SECTION
+           ============================================== -->
+      <section class="portfolio-section" id="skills">
+        <div class="section-grid">
+          <div class="section-heading-col">
+            <h2 class="section-number-title">03. SKILLS</h2>
+          </div>
+          <div class="section-body-col">
+            <!-- Filter Tabs -->
+            <div class="skills-filter-nav">
+              <button class="filter-btn active" data-filter="all">All Skills</button>
+              <button class="filter-btn" data-filter="frontend">Frontend</button>
+              <button class="filter-btn" data-filter="backend">Backend</button>
+              <button class="filter-btn" data-filter="ml">AI & Data Science</button>
+              <button class="filter-btn" data-filter="database">Databases</button>
+              <button class="filter-btn" data-filter="tools">Testing & Tools</button>
+            </div>
+
+            <!-- Skill Pills Container (Framed Style Pills) -->
+            <div class="skills-cloud" id="skillsCloud">
+              <!-- Frontend -->
+              <span class="skill-pill" data-category="frontend">HTML5</span>
+              <span class="skill-pill" data-category="frontend">CSS3</span>
+              <span class="skill-pill" data-category="frontend">JavaScript (ES6+)</span>
+              <span class="skill-pill highlighted-pill" data-category="frontend">React.js</span>
+              <span class="skill-pill" data-category="frontend">Responsive Web Design</span>
+              <span class="skill-pill" data-category="frontend">UI/UX Principles</span>
+
+              <!-- Backend -->
+              <span class="skill-pill highlighted-pill" data-category="backend">Python</span>
+              <span class="skill-pill" data-category="backend">Flask</span>
+              <span class="skill-pill" data-category="backend">Django</span>
+              <span class="skill-pill" data-category="backend">Java (OOP)</span>
+              <span class="skill-pill" data-category="backend">RESTful APIs</span>
+
+              <!-- AI & ML -->
+              <span class="skill-pill highlighted-pill" data-category="ml">Machine Learning</span>
+              <span class="skill-pill" data-category="ml">Scikit-learn</span>
+              <span class="skill-pill" data-category="ml">Pandas & NumPy</span>
+              <span class="skill-pill" data-category="ml">Data Visualization</span>
+              <span class="skill-pill" data-category="ml">Google Gemini AI</span>
+
+              <!-- Databases -->
+              <span class="skill-pill highlighted-pill" data-category="database">MongoDB</span>
+              <span class="skill-pill highlighted-pill" data-category="database">MySQL</span>
+              <span class="skill-pill" data-category="database">Database Modeling</span>
+
+              <!-- Tools & Testing -->
+              <span class="skill-pill" data-category="tools">Git & GitHub</span>
+              <span class="skill-pill" data-category="tools">VS Code</span>
+              <span class="skill-pill" data-category="tools">Software Testing (Manual)</span>
+              <span class="skill-pill" data-category="tools">STLC & SDLC</span>
+              <span class="skill-pill" data-category="tools">Regression Testing</span>
+              <span class="skill-pill" data-category="tools">MySQL Workbench</span>
+              <span class="skill-pill" data-category="tools">MongoDB Compass</span>
+            </div>
+
+            <div class="skills-summary-footer">
+              <p class="skills-note">
+                <span class="accent-dot"></span>
+                <strong>Core Specialty:</strong> End-to-end full-stack engineering with modern React interfaces,
+                Python-backed APIs, automated ML workflows, and rigorous QA validation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           04. EDUCATION SECTION
+           ============================================== -->
+      <section class="portfolio-section" id="education">
+        <div class="section-grid">
+          <div class="section-heading-col">
+            <h2 class="section-number-title">04. EDUCATION</h2>
+          </div>
+          <div class="section-body-col">
+            <div class="education-list">
+
+              <!-- MCA -->
+              <div class="education-item">
+                <div class="edu-date-badge">&bull; 2024 &mdash; JULY 2026</div>
+                <h3 class="edu-degree">Master of Computer Applications (MCA)</h3>
+                <div class="edu-institution">Kishkinda University &bull; Ballari, Karnataka</div>
+                <div class="edu-score-chip">
+                  <span class="chip-label">CGPA:</span>
+                  <span class="chip-value">9.41 / 10</span>
+                  <span class="chip-status">(Outstanding Academic Distinction)</span>
+                </div>
+                <p class="edu-desc">
+                  Focused on Advanced Software Engineering, Cloud-native Computing, Object-Oriented Frameworks, Database
+                  Systems, and Applied AI. Led the creation and deployment of the university-wide <em>KU
+                    SmartSchedule</em> system.
+                </p>
+              </div>
+
+              <!-- BCA -->
+              <div class="education-item">
+                <div class="edu-date-badge">&bull; NOV 2021 &mdash; SEPT 2024</div>
+                <h3 class="edu-degree">Bachelor of Computer Applications (BCA)</h3>
+                <div class="edu-institution">Shree Medha Degree College &bull; Ballari, Karnataka</div>
+                <div class="edu-score-chip">
+                  <span class="chip-label">CGPA:</span>
+                  <span class="chip-value">8.71 / 10</span>
+                  <span class="chip-status">(First Class with Distinction)</span>
+                </div>
+                <p class="edu-desc">
+                  Developed strong foundations in Data Structures & Algorithms, Java OOP, Relational Databases (SQL),
+                  Web Technologies, and Software Development Life Cycles.
+                </p>
+              </div>
+
+            </div>
+
+            <!-- Certifications Block -->
+            <div class="certifications-block">
+              <h4 class="cert-title">Certifications & Accreditations</h4>
+              <div class="cert-grid">
+                <div class="cert-card">
+                  <div class="cert-issuer">Infosys Springboard</div>
+                  <div class="cert-name">Explore Machine Learning using Python</div>
+                  <div class="cert-desc">Core supervised & unsupervised learning, model fitting, and Python data science
+                    packages.</div>
+                </div>
+                <div class="cert-card">
+                  <div class="cert-issuer">Simplilearn</div>
+                  <div class="cert-name">Introduction to Data Visualization</div>
+                  <div class="cert-desc">Techniques in statistical representation, exploratory visual reporting, and
+                    data communication.</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           05. PROJECTS SECTION (Highlighted & Spotlight)
+           ============================================== -->
+      <section class="portfolio-section" id="projects">
+        <div class="section-grid">
+          <div class="section-heading-col">
+            <h2 class="section-number-title">05. PROJECTS</h2>
+          </div>
+          <div class="section-body-col">
+
+            <!-- MAIN FEATURED PROJECT: KU SMARTSCHEDULE -->
+            <div class="featured-project-card" id="featuredMainProject">
+              <div class="featured-label-bar">
+                <span class="star-badge">&starf; MAIN FEATURED PROJECT</span>
+                <span class="status-pill live-pill">MCA Major Project</span>
+              </div>
+
+              <div class="project-header-row">
+                <h3 class="featured-project-title">KU SmartSchedule &mdash; AI-Powered University Timetable Generator
+                </h3>
+              </div>
+
+              <p class="featured-project-lead">
+                An intelligent full-stack university timetable scheduling platform designed for <strong>Kishkinda
+                  University</strong> that automates conflict-free timetable generation across classrooms, faculty
+                allocations, and student batches using constraint-solving logic and <strong>Google Gemini AI</strong>.
+              </p>
+
+              <!-- Interactive Mockup Visual Box -->
+              <div class="project-mockup-frame">
+                <div class="mockup-header-bar">
+                  <div class="mockup-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <span class="mockup-url">https://kusmartschedule.edu/dashboard</span>
+                  <span class="mockup-status-tag">AI Conflict Solver: Active</span>
+                </div>
+                <div class="mockup-content">
+                  <div class="mockup-sidebar">
+                    <div class="mock-nav-item active">Timetable Grid</div>
+                    <div class="mock-nav-item">Faculty Allocation</div>
+                    <div class="mock-nav-item">Classrooms & Labs</div>
+                    <div class="mock-nav-item">Gemini AI Assistant</div>
+                  </div>
+                  <div class="mockup-main">
+                    <div class="mock-stats-row">
+                      <div class="mock-stat">
+                        <span class="s-val">0</span>
+                        <span class="s-lbl">Clashes Detected</span>
+                      </div>
+                      <div class="mock-stat">
+                        <span class="s-val">100%</span>
+                        <span class="s-lbl">Faculty Mapped</span>
+                      </div>
+                      <div class="mock-stat">
+                        <span class="s-val">&lt; 3s</span>
+                        <span class="s-lbl">Generation Time</span>
+                      </div>
+                    </div>
+                    <div class="mock-table-preview">
+                      <div class="mock-row header-row">
+                        <span>Day</span><span>09:00 - 10:00</span><span>10:00 - 11:00</span><span>11:15 -
+                          12:15</span><span>01:15 - 03:15</span>
+                      </div>
+                      <div class="mock-row">
+                        <span class="day-lbl">MON</span>
+                        <span class="slot green">Adv. Python [Lab 2]</span>
+                        <span class="slot blue">Cloud Arch [CR 104]</span>
+                        <span class="slot purple">ML Lab [Lab 1]</span>
+                        <span class="slot amber">Mini-Project Work</span>
+                      </div>
+                      <div class="mock-row">
+                        <span class="day-lbl">TUE</span>
+                        <span class="slot blue">Web Tech [CR 102]</span>
+                        <span class="slot green">DBMS Theory [CR 104]</span>
+                        <span class="slot amber">Soft Skills [CR 201]</span>
+                        <span class="slot purple">React.js Practical</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Key Capabilities -->
+              <div class="project-highlights-grid">
+                <div class="highlight-box">
+                  <span class="hl-icon">&check;</span>
+                  <div>
+                    <strong>Intelligent Conflict Eradication:</strong> Resolves overlapping constraints between teacher
+                    availability, classroom capacities, and syllabus hours automatically.
+                  </div>
+                </div>
+                <div class="highlight-box">
+                  <span class="hl-icon">&check;</span>
+                  <div>
+                    <strong>Gemini AI Assistance:</strong> Natural-language schedule modifications and dynamic
+                    adjustments based on real-time leave requests.
+                  </div>
+                </div>
+                <div class="highlight-box">
+                  <span class="hl-icon">&check;</span>
+                  <div>
+                    <strong>Role-Based Access:</strong> Secure authenticated dashboards with separate granular
+                    permissions for Deans, HoDs, Faculty, and Students.
+                  </div>
+                </div>
+                <div class="highlight-box">
+                  <span class="hl-icon">&check;</span>
+                  <div>
+                    <strong>University Adoption:</strong> Contributed directly to Kishkinda University to eliminate
+                    tedious manual paper scheduling and spreadsheet human error.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="tech-tag-row">
+                <span class="tag tag-featured">React.js</span>
+                <span class="tag tag-featured">Python (Flask)</span>
+                <span class="tag tag-featured">MongoDB</span>
+                <span class="tag tag-featured">Google Gemini AI</span>
+                <span class="tag">REST APIs</span>
+                <span class="tag">JWT Auth</span>
+                <span class="tag">VS Code</span>
+              </div>
+
+              <!-- Action Links -->
+              <div class="project-actions-row">
+                <button class="btn btn-primary btn-sm" onclick="openProjectModal('ku-schedule')">
+                  <span>View Case Study & Architecture</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                  </svg>
+                </button>
+                <a href="https://github.com/pramodnayaka" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline btn-sm">
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                  </svg>
+                  <span>Repository (GitHub)</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- ADDITIONAL PROJECT SHOWCASE (From Resume) -->
+            <div class="projects-editorial-list">
+
+              <!-- House Rental Web App &mdash; End-to-End QA Testing -->
+              <div class="editorial-project-item">
+                <div class="project-title-row">
+                  <h3 class="editorial-project-title">House Rental Web App &mdash; End-to-End QA Testing</h3>
+                  <span class="project-tag-badge">Software Testing (STLC)</span>
+                </div>
+                <p class="editorial-project-desc">
+                  Executed complete lifecycle functional and manual testing across 10 core modules (Authentication,
+                  Search Filters, Booking Engine, Admin Panels). Designed comprehensive test matrices, documented defect
+                  logs in JIRA, and verified fixes via regression suites.
+                </p>
+                <div class="tech-tag-row">
+                  <span class="tag">Manual Testing</span>
+                  <span class="tag">STLC & SDLC</span>
+                  <span class="tag">JIRA</span>
+                  <span class="tag">Test Case Design</span>
+                  <span class="tag">Regression Testing</span>
+                  <span class="tag">MySQL Validation</span>
+                </div>
+                <div class="editorial-links">
+                  <button class="text-link-btn" onclick="openProjectModal('qa-testing')">View QA Test Plan
+                    &rarr;</button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           06. RESUME SECTION
+           ============================================== -->
+      <section class="portfolio-section" id="resume">
+        <div class="section-grid">
+          <div class="section-heading-col">
+            <h2 class="section-number-title">06. RESUME</h2>
+          </div>
+          <div class="section-body-col">
+            <div class="resume-card-box">
+              <div class="resume-top-banner">
+                <div class="resume-info-meta">
+                  <h3 class="resume-name-title">Pramod Nayaka H S</h3>
+                  <p class="resume-sub">MCA Graduate &bull; Software Developer &bull; Bengaluru-560076</p>
+                </div>
+                <a href="assets/pramod_resume_2k26.pdf" download="Pramod_Nayaka_Resume.pdf" class="btn btn-primary"
+                  id="resumeDownloadPrimary">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                  </svg>
+                  <span>Download Official CV (PDF)</span>
+                </a>
+              </div>
+
+              <!-- Quick Executive Summary Grid -->
+              <div class="resume-summary-grid">
+                <div class="summary-col">
+                  <h4 class="summary-head">Education Summary</h4>
+                  <div class="summary-entry">
+                    <strong>MCA &mdash; Kishkinda University</strong>
+                    <div class="entry-sub">2024 &ndash; 2026 | CGPA: 9.41 / 10</div>
+                  </div>
+                  <div class="summary-entry">
+                    <strong>BCA &mdash; Shree Medha Degree College</strong>
+                    <div class="entry-sub">2021 &ndash; 2024 | CGPA: 8.71 / 10</div>
+                  </div>
+                </div>
+
+                <div class="summary-col">
+                  <h4 class="summary-head">Internship Record</h4>
+                  <div class="summary-entry">
+                    <strong>Data Science & ML Intern</strong>
+                    <div class="entry-sub">YBI Foundation (2026)</div>
+                  </div>
+                </div>
+
+                <div class="summary-col">
+                  <h4 class="summary-head">Core Stack</h4>
+                  <p class="summary-stack-text">
+                    Python, Java, React.js, JavaScript, HTML5/CSS3, Flask, Django, MongoDB, MySQL, Machine Learning,
+                    Git/GitHub, Manual Testing & QA.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Embedded Document Actions -->
+              <div class="resume-actions-bar">
+                <a href="assets/pramod_resume_2k26.pdf" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline btn-sm">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" />
+                  </svg>
+                  <span>Open PDF in New Tab</span>
+                </a>
+                <span class="file-size-tag">Verified PDF Document &bull; 247 KB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================
+           07. CONTACT SECTION (Reference Design Alignment)
+           ============================================== -->
+      <section class="portfolio-section" id="contact">
+        <div class="section-grid">
+          <div class="section-heading-col">
+            <h2 class="section-number-title">07. CONTACT</h2>
+          </div>
+          <div class="section-body-col">
+
+            <!-- Direct Contact Info Banner (matches reference phone & email format) -->
+            <div class="contact-direct-block">
+              <div class="direct-phone-row">
+                <a href="tel:+916360174348" class="contact-big-phone" id="contactPhoneLink">
+                  +91 6360174348
+                </a>
+                <button class="copy-pill-btn" onclick="copyToClipboard('+91 6360174348', this)"
+                  title="Copy Phone Number">
+                  <span>Copy</span>
+                </button>
+              </div>
+
+              <div class="contact-email-row">
+                <span class="field-label">Email</span>
+                <div class="email-with-copy">
+                  <a href="mailto:pramodnayaka21@gmail.com" class="contact-big-email" id="contactEmailLink">
+                    pramodnayaka21@gmail.com
+                  </a>
+                  <button class="copy-pill-btn" onclick="copyToClipboard('pramodnayaka21@gmail.com', this)"
+                    title="Copy Email">
+                    <span>Copy</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="contact-socials-row">
+                <span class="field-label">Socials & Profiles</span>
+                <div class="social-links-list">
+                  <a href="https://github.com/pramodnayaka" target="_blank" rel="noopener noreferrer"
+                    class="social-text-link" id="githubProfileLink">
+                    Github
+                  </a>
+                  <a href="https://linkedin.com/in/pramod-nayaka-h-s" target="_blank" rel="noopener noreferrer"
+                    class="social-text-link" id="linkedinProfileLink">
+                    LinkedIn
+                  </a>
+                  <a href="mailto:pramodnayaka21@gmail.com" class="social-text-link">
+                    Email
+                  </a>
+                  <a href="assets/pramod_resume_2k26.pdf" download="Pramod_Nayaka_Resume.pdf" class="social-text-link">
+                    Resume
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Send Message Form -->
+            <div class="contact-form-wrapper">
+              <h3 class="form-title">Send a Direct Message</h3>
+              <p class="form-subtitle">Have an opening, an interesting project, or want to connect? Leave a note below.
+              </p>
+
+              <form id="contactForm" class="contact-form" onsubmit="handleContactSubmit(event)">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="senderName">Your Name</label>
+                    <input type="text" id="senderName" name="name" required placeholder="John Doe">
+                  </div>
+                  <div class="form-group">
+                    <label for="senderEmail">Your Email</label>
+                    <input type="email" id="senderEmail" name="email" required placeholder="john@example.com">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" required
+                    placeholder="Job Opportunity / Project Collaboration">
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="4" required
+                    placeholder="Hello Pramod, I came across your portfolio and would love to discuss..."></textarea>
+                </div>
+
+                <div class="form-submit-row">
+                  <button type="submit" class="btn btn-primary" id="contactSubmitBtn">
+                    <span>Send Message</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                      stroke-width="2.5">
+                      <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                    </svg>
+                  </button>
+                  <span class="form-feedback-msg" id="formFeedback"></span>
+                </div>
+              </form>
+            </div>
+
+            <!-- Footer Bottom Line -->
+            <footer class="portfolio-footer">
+              <div class="footer-left">
+                <p>&copy; 2026 Pramod Nayaka H S. All rights reserved.</p>
+                <p class="footer-sub">Designed with precision & inspired by modern minimalist developer aesthetics.</p>
+              </div>
+              <div class="footer-right">
+                <button class="back-to-top-btn" id="backToTopBtn" onclick="scrollToTop()">
+                  <span>Back to Top</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M12 19V5M5 12l7-7 7 7" />
+                  </svg>
+                </button>
+              </div>
+            </footer>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Interactive Project Modal (Case Study Deep Dive) -->
+  <div class="modal-overlay" id="projectModalOverlay" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-badge-group">
+          <span class="modal-badge" id="modalBadge">Project Spotlight</span>
+          <h3 class="modal-title" id="modalTitle">Project Title</h3>
+        </div>
+        <button class="modal-close-btn" onclick="closeProjectModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Content injected dynamically via JavaScript -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="closeProjectModal()">Close</button>
+        <a href="https://github.com/pramodnayaka" target="_blank" rel="noopener noreferrer" class="btn btn-primary"
+          id="modalActionBtn">
+          <span>View on GitHub</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M7 17L17 7M17 7H7M17 7V17" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification">
+    <span class="toast-message" id="toastMessage">Copied to clipboard!</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
